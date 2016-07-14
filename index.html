@@ -8,43 +8,64 @@
 
 <head>
     <title>Vaggelis's Portfolio</title>
-    
-    <meta name="viewport" content="width=device-width, scale=1.0">
-    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Google Font 'Open Sans'    -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <!--     Loading my CSS-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+
+
+
+    <!--Loading jQuery-->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js" integrity="sha256-xI/qyl9vpwWFOXz7+x/9WkG5j/SVnSw21viy8fWwbeE=" crossorigin="anonymous"></script>
+
+    <!--My scripts-->
+    <script src="js/main.js"></script>
 </head>
 
 
 <body>
 
-    <div class="loader"></div>
+        <div class="loader"></div>
     <!-- Header div   -->
     <div class="header">
-        
-        
+
+
         <div class="navbar">
-          <a href="#" class="mobile-nav"></a>
-           <h1 id="logo">Vaggelis</h1>
+            <a href="#" class="mobile-nav"></a>
+            <h1 id="logo">Vaggelis</h1>
             <ul>
-                <li><a href="">About</a></li>
-                <li><a href="">My Work</a></li>
-                <li><a href="">Contact Me</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#my-work">My Work</a></li>
+                <li><a href="#contact-me">Contact Me</a></li>
             </ul>
         </div>
-        
-        <div class="hero-text">
-        <h1>Vaggelis Danias</h1>
-        <p>16 year old software developer.</p>
-        <a href="#" id="headerBtn">MY WORK</a>
+
+        <div class="hero-text center-it">
+            <h1>Hi, I'm Vaggelis.</h1>
+            <p>I like coding and breaking applications.</p>
+            <a href="#about" id="headerBtn">LEARN MORE</a>
         </div>
+    </div>
+
+    <!-- About section       -->
+    <div class="about" id="about">
+        <div class="about-text center-it">
+            <h1>About me</h1>
+            <p>Hello there! I'm Vaggelis, an aspiring developer. Currently I'm 16 years old and I'm dabbling in web development. Other than that, I enjoy gaming, going out
+            with friends and playing sports.Thanks for taking the time
+            to check out my portfolio :) . </p>
         </div>
-        
-        <div class="body"></div>
+    </div>
+
+    <div class="my-work" id="my-work"></div>
+    <div class="contact-me" id="contact-me"></div>
+    <footer>dwdawd</footer>
 </body>
 
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js" integrity="sha256-xI/qyl9vpwWFOXz7+x/9WkG5j/SVnSw21viy8fWwbeE=" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
+
 </html>
