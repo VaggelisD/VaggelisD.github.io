@@ -9,8 +9,8 @@ $(document).ready(function () {
         $('.mobile-nav').on('click', function () {
             $('.header ul').slideToggle(500, 'easeInOutCubic');
         });
-    });
-}, 2000); // parametre is ms of loading time 
+    }, 2000);
+}); // parametre is ms of loading time 
 
 
 // Smoth scrolling on anchor elements.
