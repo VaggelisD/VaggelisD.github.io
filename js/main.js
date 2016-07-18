@@ -28,3 +28,15 @@ $(function () {
         }
     });
 });
+
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    
+    var position = 600;
+    if(height > position) {
+        $(".navbar").addClass("full-navbar");
+    }
+    else{
+        $(".navbar").removeClass("full-navbar");
+    }
+});

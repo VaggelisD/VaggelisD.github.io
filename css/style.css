@@ -2,12 +2,16 @@ body {
     font-family: "Open Sans";
 }
 
+
 /* Custom class to center text */
-.center-it{
+
+.center-it {
     margin: auto;
     width: 70%;
     text-align: center;
 }
+
+
 /* Loading */
 
 .loader {
@@ -18,7 +22,7 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background: url('/images/loading.gif') 50% 50% no-repeat #2290f0; 
+    background: url('/images/loading.gif') 50% 50% no-repeat #2290f0;
 }
 
 
@@ -53,6 +57,7 @@ body {
 .navbar li {
     display: inline-block;
     padding: 0.5em;
+    margin-left: 1em;
     /*    margin-right: 0.3em;*/
 }
 
@@ -62,7 +67,54 @@ body {
 }
 
 
+/*
+Full navbar is the navbar that is shown
+after the user has scrolled to almost
+the second div
+*/
+
+.full-navbar {
+    /* Fixed position requires a z-index and will
+      make the width shorter, so */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: 100vw;
+    z-index: 100;
+    position: fixed;
+    /*Pink #7c4199 - black: rgba(0,0,0,0.85); */
+    background-color: rgba(0,0,0,0.85);
+    height: 65px;
+    line-height: 40px;
+}
+
+.full-navbar h1 {
+    padding: 0;
+    color: white;
+    display: inline;
+    font-size: 30px;
+    margin-left: 0.4em;
+    position: relative;
+    top: 0.13em;
+}
+
+.full-navbar ul {
+    display: inline;
+    float: right;
+}
+
+.full-navbar li {
+    display: inline;
+    font-size: 18px;
+    margin-left: 1em;
+    position: relative;
+    top: -0.3em;
+}
+
+
 /* The text in the middle of the header section*/
+
 .hero-text {
     position: relative;
     top: 15em;
@@ -79,9 +131,12 @@ body {
     margin-top: 1em;
 }
 
-.hero-text h1, .hero-text p, .hero-text a{
+.hero-text h1,
+.hero-text p,
+.hero-text a {
     color: white;
 }
+
 .hero-text a {
     text-decoration: none;
     position: relative;
@@ -93,8 +148,10 @@ body {
     background-color: blue;
     border: none;
     border-radius: 0.3em;
-}/*End of header*/
+}
 
+
+/*End of header*/
 
 
 /* Second section*/
@@ -106,52 +163,71 @@ body {
     background-color: #4b2ca0;
 }
 
-.about-text{
+.about-text {
     position: relative;
     top: 4em;
     font-size: 1.3em;
 }
 
-.about-text h1 { font-size: 2em; }
-.about-text p{
+.about-text h1 {
+    font-size: 2em;
+}
+
+.about-text p {
     margin-top: 1em;
     font-size: 1.2em;
 }
 
 
 /*Other sections*/
-.my-work{
-    
+
+.my-work {
     height: 60vh;
-    background-color: black;
+    background-color: green;
 }
-.contact-me{
+
+.contact-me {
     height: 60vh;
     background-color: blue;
 }
 
+
 /* Footer */
-footer{
-    height: 4vh;
+
+footer {
+    padding: 1em;
     background-color: black;
     color: grey;
     text-align: center;
 }
+
+footer a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
 /* Media queries*/
 
-@media screen and (min-width: 1000px) {
 
-    .about-text{
+/* More than 1000PX */
+
+@media screen and (min-width: 1000px) {
+    .about-text {
         top: 7em;
     }
 }
+
+
+/* Less than 600PX */
 
 @media screen and (max-width: 600px) {
     #logo {
         top: 0;
     }
     .navbar h1 {
-        display: inline-block;
+        line-height: 40px;
+        display: inline;
     }
     .navbar ul {
         /*height: 0;**/
@@ -183,9 +259,39 @@ footer{
         top: 2em;
     }
     .hero-text {
-        top: 4em;
+        top: 7em;
+        padding: 2em;
+    }
+    
+/* 
+    Navbar if the user has scrolled down on
+    other divs
+    */
+    .full-navbar #logo{
+        position: relative;
+        top: -0.6em;
+        left: 0.3em;
+    }
+    .full-navbar .mobile-nav {
+        display: block;
+        top: 1em;
+        background-position: 90% center;
+/*        background-image: url(/images/burgernav.svg);*/
     }
 }
+
+
+/* Less than 500PX */
+
+@media screen and (max-width: 500px) {
+    .about-text p {
+        margin-top: 0.6em;
+        font-size: 1.1em;
+    }
+}
+
+
+/* Less than 400PX */
 
 @media screen and (max-width: 400px) {
     .hero-text {
@@ -193,8 +299,7 @@ footer{
         width: 80%;
         margin: auto;
     }
-    
-    .about-text{
+    .about-text {
         position: relative;
         top: 1em;
     }
