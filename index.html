@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <!-- 
 Thanks for looking at my portfolio!
 I hope you like it, code-wise and design-wise. -->
@@ -7,28 +6,20 @@ I hope you like it, code-wise and design-wise. -->
 
 <head>
     <title>Vaggelis's Portfolio</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Loading Google Font 'Open Sans' -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <!--     Loading my CSS-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
-
-
-</head>
-
+    <link rel="stylesheet" href="sass/css/style.css">
+    <link rel="stylesheet" href="sass/css/reset.css"> </head>
 
 <body>
-
     <!-- 
 The div that acts as the loading animation.
 -->
-<div class="loader"></div>
+<!--    <div class="loader"></div>-->
     <!-- Header div   -->
     <div class="header">
-
         <!-- Navigation bar -->
         <div class="navbar">
             <a href="#" class="mobile-nav"></a>
@@ -40,47 +31,76 @@ The div that acts as the loading animation.
             </ul>
         </div>
         <!-- End of navigation bar -->
-        
         <!-- Header text -->
         <div class="hero-text center-it">
             <h1>Hi, I'm Vaggelis.</h1>
-            <p>I like coding and breaking applications.</p>
-            <a href="#about" id="headerBtn">LEARN MORE</a>
-        </div> <!-- End of header text -->
-    </div> <!-- End of header -->
-
+            <p>I like coding and breaking applications.</p> <a href="#about" id="headerBtn">LEARN MORE</a> </div>
+        <!-- End of header text -->
+    </div>
+    <!-- End of header -->
     <!-- About section -->
     <div class="about" id="about">
         <div class="about-text center-it">
             <h1>About me</h1>
-            <p>Hello there! I'm Vaggelis, an aspiring developer. Currently I'm 16 years old and I'm dabbling in web development. Other than that, I enjoy gaming, going out with friends and playing sports.Thanks for taking the time to check out my portfolio :) . </p>
+            <div class="hero-line"></div>
+            <p>Hello there! I'm Vaggelis, an aspiring developer. Currently I'm 16 years old and I'm dabbling in web development. Other than that, I enjoy gaming, going out with friends and playing sports. Thanks for taking the time to check out my portfolio :) . </p>
+        </div>
+        <div class="skills-text center-it">
+            <h1>Skills</h1>
+            <div class="hero-line"></div>
+            <p>I have a diverse set of skills, ranging from <span id="csharp">C# .NET </span> application development, to website development utilizing languages like <span id="html5">HTML5</span> / <span id="css3">CSS3</span> /<span id="js"> JavaScript</span>. I am also looking forward to diving into back-end development. </p>
         </div>
     </div>
-
-    <div class="my-work" id="my-work"></div>
+    <div class="my-work" id="my-work">
+      <h1 class="center-it">Projects</h1>
+      <div class="hero-line"></div>
+       <div class="project-box">
+            <div class="image"> 
+            <img src="/images/ProjectRainbowText.png" alt="Project not found :(" style=""> </div>
+            <div class="content center-it">
+                <div class="title"> <a href="#">Rainbow Text</a> </div>
+                <div class="description">
+                    <p>A custom notepad editor, with a rainbow text feature. It can't get better.</p>
+                </div>
+                <div class="tools-used">
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="split-line"></div>
+        <div class="project-box">
+            <div class="image"> 
+            <img src="/images/ProjectNotFound.png" alt="Project not found :("> </div>
+            <div class="content center-it">
+                <div class="title"> <a href="#">Title</a> </div>
+                <div class="description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum esse deserunt eos, nobis dignissimos suscipit minus hic voluptates error.</p>
+                </div>
+                <div class="tools-used">
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="contact-me" id="contact-me"></div>
-
     <footer>
-        <p>© 2016
-            <a href="https://github.com/VaggelisD">
-            Vaggelis Danias
-        </a> . All rights reserved.
-        </p>
+        <p>© 2016, designed and developed by <a href="https://github.com/VaggelisD">
+            Vaggelis Danias</a> . All rights reserved. </p>
     </footer>
-
-
     <!--JAVASCRIPT-->
     <!-- Loading jQuery-->
     <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
-
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
-
     <!--My scripts-->
     <script type="text/javascript" src="js/main.js"></script>
 </body>
-
-
-
-
 
 </html>
