@@ -1,363 +1,409 @@
-/*TODO: Change fonts from em to px */
-
-
 /*TODO: Split the files for responsive design*/
-
+/*TODO: Add mobile focus*/
+ 
 body {
-    font-family: "Open Sans";
+  font-family: "Open Sans";
+  line-height: 3;
 }
-
-
-/* Custom class to center text */
-
+ 
+/* Custom class to center items and text */
+ 
 .center-it {
-    margin: auto;
-    width: 70%;
-    text-align: center;
+  margin: auto;
+  width: 90%;
+  text-align: center;
 }
-
+ 
+/* The line between the paragraphs and the title in the about section */
+ 
 .hero-line {
-    background-color: #ffffff;
-    height: 2px;
-    width: 2em;
-    margin: auto;
-    margin-top: 0.5em;
+  background-color: #ffffff;
+  height: 2px;
+  width: 2em;
+  margin: auto;
+  margin-top: 0.5em;
+  color: 
 }
-
-
-/* Loading */
-
+ 
+/* Loading animation, make it fullscreen, center
+the animation and play it for 2secs (See JS file) */
+ 
 .loader {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    background: url('/images/loading.gif') 50% 50% no-repeat #2290f0;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: url("/images/loading.gif") 50% 50% no-repeat #2290f0;
 }
-
-
+ 
 /* Header section*/
-
+ 
 .header {
-    background-image: url("/images/headerImg.jpg");
-    background-size: cover;
-    height: 100vh;
-    color: whitesmoke;
-    overflow: hidden;
+  background-image: url("/images/headerImg.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: whitesmoke;
+  overflow: hidden;
 }
-
-#logo {
+ 
+/* -Navbar-
+   Navbar h1 - Logo
+   Navbar ul/li/a - nav items */
+ 
+.navbar {
+  h1 {
     position: relative;
     top: 0.4em;
     left: 1em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+  ul {
+    position: absolute;
+    right: 2em;
+    top: 1em;
+  }
+  li {
+    display: inline-block;
+    padding: 0.5em;
+    margin-left: 1em;
+    font-size: 1.1em;
+    /*  margin-right: 0.3em;*/
+    &:hover {
+      border-bottom: 1px solid red;
+      transition: 0.35s;
+      color: red;
+    }
+  }
+  h1:hover {
+    transition: 0.35s;
+    cursor: pointer;
+    color: red;
+  }
 }
-
-.navbar {
-    a {
-        color: inherit;
-        text-decoration: none;
-        font-size: 1.1em;
-    }
-    ul {
-        position: absolute;
-        right: 2em;
-        top: 1em;
-    }
-    li {
-        display: inline-block;
-        padding: 0.5em;
-        margin-left: 1em;
-        font-size: 1.1em;
-        /*  margin-right: 0.3em;*/
-        &:hover {
-            transition: 0.35s;
-            color: red;
-        }
-    }
-    h1:hover {
-        transition: 0.35s;
-        cursor: pointer;
-        color: red;
-    }
-}
-
-
+ 
 /*
 Full navbar is the navbar that is shown
 after the user has scrolled to almost
 the second div
 */
-
+ 
 .full-navbar {
-    /* Fixed position requires a z-index and will
-    make the width shorter, so */
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    width: 100vw;
-    z-index: 100;
-    position: fixed;
-    /*Pink #7c4199 - black: rgba(0,0,0,0.85); */
-    background-color: rgba(0, 0, 0, 0.85);
-    height: 65px;
-    line-height: 40px;
+  /* Fixed position requires a z-index and will
+make the width shorter, so */
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+  /*Pink #7c4199 - black: rgba(0,0,0,0.85); */
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 65px;
+  line-height: 40px;
+  h1 {
+    padding: 0;
+    color: white;
+    display: inline;
+    font-size: 30px;
+    margin-left: 0.4em;
+    position: relative;
+    top: 0.13em;
+  }
+  ul {
+    display: inline;
+    float: right;
+  }
+  li {
+    display: inline;
+    font-size: 18px;
+    margin-left: 1em;
+    position: relative;
+    top: -0.3em;
+  }
+}
+ 
+/* The text in the middle of the header section*/
+ 
+.hero-text {
+  position: relative;
+  top: 15em;
+  text-align: center;
+  h1 {
+    font-size: 2.5em;
+  }
+  p {
+    position: relative;
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
+  h1, p {
+    color: white;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 1em;
+    display: inline-block;
+    width: 10em;
+    margin-top: 2em;
+    padding: 1em;
+    border: 2px solid white;
+    color: white;
+    border-radius: 0.3em;
+    &:hover {
+      background-color: blue;
+      color: white;
+      border: none;
+    }
+  }
+}
+ 
+/*End of header*/
+ 
+/* Second section*/
+ 
+.about {
+  background-image: url(/images/backgroundStripes.png);
+  height: auto;
+  color: white;
+  background-color: #4b2ca0;
+  font-size: 1.5em;
+  h1 {
+    font-size: 1.4em;
+  }
+  p {
+    font-size: 1em;
+    margin-top: 0.7em;
+  }
+}
+ 
+/* The spans that change the words color*/
+ 
+#csharp {
+  color: #5bef33;
+}
+ 
+#html5 {
+  color: #f32424;
+}
+ 
+#css3 {
+  color: #8893f0;
+}
+ 
+#js {
+  color: #f8f35d;
+}
+ 
+/* /SPANS */
+ 
+/* The text in the about section */
+ 
+.about-text {
+  position: relative;
+  top: 2em;
+  p {
+    margin-top: 0.7em;
+  }
+}
+ 
+.skills-text {
+  margin-top: 6em;
+  padding-bottom: 1.5em;
+}
+ 
+/* Projects */
+ 
+.my-work {
+  height: auto;
+  font-size: 1.3em;
+  background-color: #c2c2ca;
+  text-align: center;
+  h1 {
+    position: relative;
+    top: 0.6em;
+    font-size: 2em;
+  }
+}
+ 
+.project-box {
+  margin-top: 1em;
+}
+ 
+.content {
+  display: inline-block;
+  width: 60%;
+  margin-top: 2em;
+}
+ 
+.description {
+  font-size: 0.9em;
+  margin: 0.4em;
+  color: #010140;
+}
+ 
+.my-work .hero-line {
+  position: relative;
+  top: 1em;
+  background-color: black;
+}
+ 
+.image img {
+  height: 100px;
+  width: 300px;
+  display: inline-block;
+  margin-top: 1em;
+}
+ 
+.title a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+ 
+.tools-used {
+  ul {
+    list-style-type: none;
+  }
+  li {
+    display: inline-block;
+    padding: 0.4em;
+    margin-top: 0.3em;
+    color: white;
+    background-color: #ed1616;
+    border-radius: 0.2em;
+    font-size: 0.8em;
+  }
+}
+ 
+.split-line {
+  height: 1px;
+  background-color: black;
+  width: 90%;
+  margin: auto;
+  margin-top: 3em;
+}
+ 
+#projectN2 {
+  padding-bottom: 1em;
+}
+ 
+/* Contact me section*/
+ 
+.contact-me {
+  height: 20em;
+  background-color: blue;
+  color: white;
+}
+ 
+/* Footer */
+ 
+footer {
+  padding: 1em;
+  background-color: black;
+  color: grey;
+  text-align: center;
+  a {
+    color: aliceblue;
+    text-decoration: none;
+  }
+}
+ 
+/*
+----- Media queries -----
+*/
+ 
+/*
+Less than 1057px.
+At 1057px, the project section is changed,
+where the image and the description is not inline but act as blocks and each take up
+xyz height.
+*/
+ 
+@media screen and (max-width: 1057px) {
+  .my-work .hero-line {
+    margin-top: 0.7em;
+    margin-bottom: 1em;
+  }
+  .image {
+    width: 70%;
+    margin: 0 auto;
+    img {
+      width: 300px;
+      height: 100px;
+    }
+  }
+  .skills-text {
+    margin-top: 5em;
+  }
+  .split-line {
+    margin-top: 1em;
+  }
+  /* Disable vertical scrollbar */
+  /*
+      ::-webkit-scrollbar {
+          display: block;
+      }
+  */
+  .project-box {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .content {
+    margin-top: 0.5em;
+  }
+}
+ 
+/* More than 1000PX */
+ 
+@media screen and (min-width: 1058px) {
+  .about-text {
+    top: 3.5em;
+  }
+  .skills-text {
+    margin-top: 6em;
+  }
+  .image img {
+    width: 312px;
+    height: 135px;
+    float: left;
+    margin-left: 2em;
+  }
+  .description .title {
+    display: inline-block;
+  }
+}
+ 
+/* Less than 600PX */
+ 
+@media screen and (max-width: 600px) {
+  #logo {
+    top: 0;
+    left: 1em;
+  }
+  .navbar {
     h1 {
-        padding: 0;
-        color: white;
-        display: inline;
-        font-size: 30px;
-        margin-left: 0.4em;
-        position: relative;
-        top: 0.13em;
+      line-height: 40px;
+      display: inline;
     }
     ul {
-        display: inline;
-        float: right;
-    }
-    li {
-        display: inline;
-        font-size: 18px;
-        margin-left: 1em;
-        position: relative;
-        top: -0.3em;
-    }
-}
-
-
-/* The text in the middle of the header section*/
-
-.hero-text {
-    position: relative;
-    top: 15em;
-    text-align: center;
-    h1 {
-        font-size: 2.5em;
-    }
-    p {
-        position: relative;
-        font-size: 1.5em;
-        margin-top: 1em;
-    }
-    h1,
-    p {
-        color: white;
-    }
-    a {
-        color: white;
-        text-decoration: none;
-        position: relative;
-        font-size: 1em;
-        display: inline-block;
-        width: 10em;
-        margin-top: 2em;
-        padding: 1em;
-        border: 2px solid white;
-        color: white;
-        border-radius: 0.3em;
-        &:hover {
-            background-color: blue;
-            color: white;
-            border: none;
-        }
-    }
-}
-
-
-/*End of header*/
-
-
-/* Second section*/
-
-.about {
-    background-image: url(/images/backgroundStripes.png);
-    height: 30em;
-    color: white;
-    background-color: #4b2ca0;
-    font-size: 1.5em;
-    
-    h1 {
-        font-size: 1.4em;
-    }
-    p {
-        font-size: 1em;
-        margin-top: 0.7em;
-    }
-}
-#csharp { color: #5bef33 }
-#html5 {color: #f32424;}
-#css3 { color: #8893f0}
-#js { color: #f8f35d }
-
-.about-text {
-    position: relative;
-    top: 2em;
-    p {
-        margin-top: 0.7em;
-    }
-}
-
-.skills-text {
-    margin-top: 3em;
-}
-
-
-
-/* Projects */
-.my-work {
-    height: 40em;
-    font-size: 1.3em;
-    background-color: #c2c2ca;
-    
-    h1{
-        position: relative;
-        top: 1em;
-        font-size: 2em;
-    }
-}
-
-.project-box{
-    display: inline-block;
-    margin-top: 4em;
-    color: black;
-    padding-bottom: 1em;
-}
-
-.content{
-    display: inline-block;
-    margin-left: 2em;
-    width: 60%;
-}
-
-.description{
-    font-size: 0.8em;
-    margin: 0.4em;
-    color: #010140;
-}
-.my-work .hero-line{
-    position: relative;
-    top: 1.5em;
-}
-
-.image{
-    img{
-        width:312px;
-        height: 135px;
-    }
-    float: left;
-    margin-left: 3em;
-}
-
-.title{
-    a{
-    color: inherit;
-    text-decoration: none;
-    font-size: 1.3em;
-    }
-}
-
-.tools-used{
-    ul{
-        list-style-type: none;
-    }
-    li{
-        display: inline-block;
-        padding: 0.4em;
-        margin-top: 0.3em;
-        color: white;
-        background-color: #ed1616;
-        border-radius: 0.2em;
-        font-size: 0.8em;
-    }
-}
-
-.split-line{
-    height: 1px;
-    background-color: black;
-    width: 90%;
-    margin: auto;
-    margin-top: 3em;
-}
-
-.contact-me {
-    height: 60vh;
-    background-color: blue;
-}
-
-
-/* Footer */
-
-footer {
-    padding: 1em;
-    background-color: black;
-    color: grey;
-    text-align: center;
-    a {
-        color: aliceblue;
-        text-decoration: none;
-    }
-}
-
-
-/* Media queries*/
-
-
-/* More than 1000PX */
-
-@media screen and (min-width: 1000px) {
-    .about-text {
-        top: 3.5em;
-    }
-    .skills-text{
-        margin-top: 6em;
-    }
-}
-
-@media screen and (max-width: 1057px){
-    
-    .image{
-     display: block;
-    width: 105%;
-    margin: 0 auto;
-    }
-    .project-box{
-        display: block;
-        width: 80%;
-        margin: auto;
-        text-align: center;
-    }
-}
-
-/* Less than 600PX */
-
-@media screen and (max-width: 600px) {
-    #logo {
-        top: 0;
-    }
-    .navbar {
-        h1 {
-            line-height: 40px;
-            display: inline;
-        }
-        ul {
-            /*height: 0;**/
-            width: 100vw;
-            display: none;
-            overflow: hidden;
-            text-align: center;
-            position: relative;
-            top: 0.4em;
-            right: 1em;
-            background-color: #060719;
-        }
-    }
-    .navbar li:hover {
-        border-left: 2px solid red;
-    }
-    .navbar ul li {
+      height: 0;
+      width: 100vw;
+      display: none;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+      top: 0.4em;
+      right: 1em;
+      background-color: #060719;
+      li {
         display: none;
         display: block;
         width: 100vw;
@@ -365,69 +411,78 @@ footer {
         overflow: hidden;
         border-bottom: 1px solid #75777a;
         &:first-child {
-            border-top: 1px solid #75777a;
+          border-top: 1px solid #75777a;
         }
+      }
     }
-    .mobile-nav {
-        display: block;
-        background: url(/images/burgernav.svg) no-repeat 93% center;
-        height: 32px;
-        position: relative;
-        top: 2em;
+  }
+  .mobile-nav {
+    display: block;
+    background: url(/images/burgernav.svg) no-repeat 93% center;
+    height: 32px;
+    position: relative;
+    top: 2em;
+  }
+  .hero-text {
+    position: relative;
+    top: 3em;
+  }
+    /*
+Navbar if the user has scrolled down on
+other divs
+*/
+  .full-navbar {
+    #logo {
+      position: relative;
+      top: -0.7em;
     }
-    .hero-text {
-        position: relative;
-        top: 3em;
-    }
-    /* 
-  Navbar if the user has scrolled down on
-  other divs
-  */
-    .full-navbar {
-        #logo {
-            position: relative;
-            left: em;
-            top: -0.7em;
-        }
-        .mobile-nav {
+    display: none;
+    /*
             display: block;
             top: 1em;
-            background-image: url(/images/);
             background-position: 90% center;
-           
-        }
-    }
-    
-    .about{
-        height: 35em;
-        font-size: 1.45em;
-    }
+    */
+  }
+  .about {
+    font-size: 1.45em;
+  }
+  .project-box {
+    margin-bottom: 0em;
+  }
+  .image img {
+    width: 250px;
+  }
 }
-
-
+ 
 /* Less than 500PX */
-
+ 
 @media screen and (max-width: 500px) {
-    
-    .about{
-        height: 40em;
-    }
-    .hero-line{
-        margin-top: 0.2em;
-        margin-bottom: -0.4em;
-    }
+  .hero-line {
+    margin-top: 0.2em;
+    margin-bottom: -0.4em;
+  }
+  .image img {
+    width: 200px;
+  }
 }
-
-
+ 
 /* Less than 400PX */
-
+ 
 @media screen and (max-width: 400px) {
-    .hero-text {
-        top: 5em;
-        width: 80%;
-        margin: auto;
-    }
-    .about{
-        height: 48.5em;
-    }
+  .hero-text {
+    top: 5em;
+    width: 80%;
+    margin: auto;
+  }
+  .about {
+    font-size: 1.3em;
+  }
+  .image img {
+    width: 150px;
+    height: 100px;
+    margin: 1em auto -1em auto;
+    /* 1em from top, auto to right-left to center it and -1em for bottom, so the content such as the description and the title can be closer */
+  }
 }
+ 
+/*# sourceMappingURL=style.css.map */

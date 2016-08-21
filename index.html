@@ -1,23 +1,29 @@
 <!DOCTYPE HTML>
-<!-- 
+<!--
+- TODO: Add the 'Contact me' section including icons for social media and  a form powered by PHP, for now. Add more responsiveness. Target HD+ screens, where text and sections seem huge,  suck as 2K/4K screens.
+-->
+<!--
 Thanks for looking at my portfolio!
 I hope you like it, code-wise and design-wise. -->
 <html>
-
+ 
 <head>
     <title>Vaggelis's Portfolio</title>
+    <!-- Meta's for     -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Loading Google Font 'Open Sans' -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <!--     Loading my CSS-->
     <link rel="stylesheet" href="sass/css/style.css">
     <link rel="stylesheet" href="sass/css/reset.css"> </head>
-
+ 
 <body>
-    <!-- 
+    <!--
 The div that acts as the loading animation.
 -->
-<!--    <div class="loader"></div>-->
+        <div class="loader"></div>
     <!-- Header div   -->
     <div class="header">
         <!-- Navigation bar -->
@@ -30,14 +36,11 @@ The div that acts as the loading animation.
                 <li><a href="#contact-me">Contact Me</a></li>
             </ul>
         </div>
-        <!-- End of navigation bar -->
         <!-- Header text -->
         <div class="hero-text center-it">
             <h1>Hi, I'm Vaggelis.</h1>
-            <p>I like coding and breaking applications.</p> <a href="#about" id="headerBtn">LEARN MORE</a> </div>
-        <!-- End of header text -->
+            <p>I love coding and breaking websites.</p> <a href="#about" id="headerBtn">LEARN MORE</a> </div>
     </div>
-    <!-- End of header -->
     <!-- About section -->
     <div class="about" id="about">
         <div class="about-text center-it">
@@ -45,18 +48,19 @@ The div that acts as the loading animation.
             <div class="hero-line"></div>
             <p>Hello there! I'm Vaggelis, an aspiring developer. Currently I'm 16 years old and I'm dabbling in web development. Other than that, I enjoy gaming, going out with friends and playing sports. Thanks for taking the time to check out my portfolio :) . </p>
         </div>
+        <!-- Skills section -->
         <div class="skills-text center-it">
             <h1>Skills</h1>
             <div class="hero-line"></div>
             <p>I have a diverse set of skills, ranging from <span id="csharp">C# .NET </span> application development, to website development utilizing languages like <span id="html5">HTML5</span> / <span id="css3">CSS3</span> /<span id="js"> JavaScript</span>. I am also looking forward to diving into back-end development. </p>
         </div>
     </div>
+    <!-- Project section -->
     <div class="my-work" id="my-work">
-      <h1 class="center-it">Projects</h1>
-      <div class="hero-line"></div>
-       <div class="project-box">
-            <div class="image"> 
-            <img src="/images/ProjectRainbowText.png" alt="Project not found :(" style=""> </div>
+        <h1 class="center-it">Projects</h1>
+        <div class="hero-line"></div>
+        <div class="project-box" id="projectN1">
+            <div class="image"> <img src="/images/ProjectRainbowText.png" alt="Rainbow Text"> </div>
             <div class="content center-it">
                 <div class="title"> <a href="#">Rainbow Text</a> </div>
                 <div class="description">
@@ -71,36 +75,59 @@ The div that acts as the loading animation.
                 </div>
             </div>
         </div>
-            <div class="split-line"></div>
-        <div class="project-box">
-            <div class="image"> 
-            <img src="/images/ProjectNotFound.png" alt="Project not found :("> </div>
+        <!-- The line that splits each project
+        is a div with the class below       -->
+        <div class="split-line"></div>
+        <div class="project-box" id="projectN2">
+            <div class="image"> <img id="hey" src="/images/ProjectNotFound.png" alt="Project not found :("></div>
             <div class="content center-it">
-                <div class="title"> <a href="#">Title</a> </div>
+                <div class="title"> <a href="#">Null</a> </div>
                 <div class="description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum esse deserunt eos, nobis dignissimos suscipit minus hic voluptates error.</p>
+                    <p>Haven't added a project yet :( . To be updated!</p>
                 </div>
                 <div class="tools-used">
                     <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
+                        <li>NaN</li>
+                        <li>NaN</li>
+                        <li>NaN</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="contact-me" id="contact-me"></div>
+    <!-- The site will be hosted on Github Pages, thus I'd    -->
+    <div class="contact-me" id="contact-me">
+        <div class="contact-form center-it">
+            <h1>Contact me</h1>
+            <div class="hero-line"></div>
+            <form action="https://formspree.io/vagosgan13@gmail.com@email.com" method="POST">
+                <p class="input-text">Your name</p>
+                <input type="text" name="name" placeholder="Name"
+                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'">
+                <p class="input-text">Your e-mail</p>
+                <input type="email" name="_replyto" placeholder="e-mail"
+                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-Mail'">
+                <p class="input-text">Your message</p>
+                <textarea name="message" placeholder="Message"
+                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"
+                ></textarea>
+                <input type="submit" value="Send" id="send-button"> </form>
+        </div>
+    </div>
     <footer>
-        <p>© 2016, designed and developed by <a href="https://github.com/VaggelisD">
+        <p>© 2016 by <a href="https://github.com/VaggelisD">
             Vaggelis Danias</a> . All rights reserved. </p>
     </footer>
     <!--JAVASCRIPT-->
-    <!-- Loading jQuery-->
+    <!-- Loading jQuery a-->
+    <!--
     <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+-->
+    <script src="js/jQueryLib/jquery-min.js"></script>
+    <script src="js/jQueryLib/jquery-ui.js"></script>
     <!--My scripts-->
     <script type="text/javascript" src="js/main.js"></script>
 </body>
-
+ 
 </html>
