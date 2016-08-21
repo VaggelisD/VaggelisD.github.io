@@ -6,7 +6,7 @@
 Thanks for looking at my portfolio!
 I hope you like it, code-wise and design-wise. -->
 <html>
- 
+
 <head>
     <title>Vaggelis's Portfolio</title>
     <!-- Meta's for     -->
@@ -18,12 +18,12 @@ I hope you like it, code-wise and design-wise. -->
     <!--     Loading my CSS-->
     <link rel="stylesheet" href="sass/css/style.css">
     <link rel="stylesheet" href="sass/css/reset.css"> </head>
- 
+
 <body>
     <!--
 The div that acts as the loading animation.
 -->
-        <div class="loader"></div>
+    <div class="loader"></div>
     <!-- Header div   -->
     <div class="header">
         <!-- Navigation bar -->
@@ -101,16 +101,14 @@ The div that acts as the loading animation.
             <h1>Contact me</h1>
             <div class="hero-line"></div>
             <form action="https://formspree.io/vagosgan13@gmail.com@email.com" method="POST">
+                <!-- On focus, clear the input placeholders. When out of focus, replace them with their
+                     original messages. -->
                 <p class="input-text">Your name</p>
-                <input type="text" name="name" placeholder="Name"
-                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'">
+                <input type="text" name="name" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'">
                 <p class="input-text">Your e-mail</p>
-                <input type="email" name="_replyto" placeholder="e-mail"
-                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-Mail'">
+                <input type="email" name="_replyto" placeholder="e-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-Mail'">
                 <p class="input-text">Your message</p>
-                <textarea name="message" placeholder="Message"
-                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"
-                ></textarea>
+                <textarea name="message" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea>
                 <input type="submit" value="Send" id="send-button"> </form>
         </div>
     </div>
@@ -120,14 +118,10 @@ The div that acts as the loading animation.
     </footer>
     <!--JAVASCRIPT-->
     <!-- Loading jQuery a-->
-    <!--
-    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
--->
-    <script src="js/jQueryLib/jquery-min.js"></script>
-    <script src="js/jQueryLib/jquery-ui.js"></script>
+    <script src="js/jQueryLib/jquery-3.1.0.min.js"></script>
+    <script src="js/jQueryLib/jquery-ui.min.js"></script>
     <!--My scripts-->
     <script type="text/javascript" src="js/main.js"></script>
 </body>
- 
+
 </html>
