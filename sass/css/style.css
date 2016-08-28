@@ -1,301 +1,151 @@
-/*TODO: Split the files for responsive design*/
-/*TODO: Add mobile focus*/
-body {
-  font-family: "Open Sans";
-  line-height: 1.5;
-}
+/* Imported SASS files */
+/* line 1, ../sass/reset.scss */
+* { border: 0; padding: 0; margin: 0; box-sizing: border-box; }
+/* line 7, ../sass/reset.scss */
+*:before, *:after { box-sizing: border-box; }
+
+/* line 11, ../sass/style.scss */
+body { font-family: "Open Sans"; line-height: 1.5; }
 
 /* Custom class to center items and text */
-.center-it {
-  margin: auto;
-  width: 90%;
-  text-align: center;
-}
+/* line 19, ../sass/style.scss */
+.center-it { margin: auto; width: 90%; text-align: center; }
 
 /* The line between the paragraphs and the title in the about section */
-.hero-line {
-  background-color: #ffffff;
-  height: 2px;
-  width: 2em;
-  margin: auto;
-  margin-top: 0.5em;
-}
+/* line 28, ../sass/style.scss */
+.hero-line { background-color: #ffffff; height: 2px; width: 2em; margin: auto; margin-top: 0.5em; }
 
 /* Loading animation, make it fullscreen, center
 the animation and play it for 2secs (See JS file) */
-.loader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;
-  background: url("/images/loading.gif") 50% 50% no-repeat #2290f0;
-}
+/* line 40, ../sass/style.scss */
+.loader { position: fixed; left: 0px; top: 0px; overflow: hidden; width: 100vw; height: 100vh; z-index: 9999; background: url("/images/loading.gif") 50% 50% no-repeat #2290f0; }
 
 /* Header section*/
-.header {
-  background-image: url("/images/headerImg.jpg");
-  background-size: cover;
-  height: 100vh;
-  color: whitesmoke;
-  overflow: hidden;
-}
+/* line 54, ../sass/style.scss */
+.header { background-image: url("/images/headerImg.jpg"); background-size: cover; height: 100vh; color: whitesmoke; overflow: hidden; }
 
-/* -Navbar-
-   Navbar h1 - Logo
-   Navbar ul/li/a - nav items */
-.navbar h1 {
-  position: relative;
-  top: 0.4em;
-  left: 1em;
-}
-.navbar a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 1.1em;
-}
-.navbar ul {
-  position: absolute;
-  right: 2em;
-  top: 1em;
-}
-.navbar li {
-  display: inline-block;
-  padding: 0.5em;
-  margin-left: 1em;
-  font-size: 1.1em;
-  /*  margin-right: 0.3em;*/
-}
-.navbar li:hover {
-  border-bottom: 1px solid red;
-  -webkit-transition: 0.35s;
-  transition: 0.35s;
-  color: red;
-}
-.navbar h1:hover {
-  -webkit-transition: 0.35s;
-  transition: 0.35s;
-  cursor: pointer;
-  color: red;
-}
+/* -Navbar- Navbar h1 - Logo Navbar ul/li/a - nav items */
+/* line 68, ../sass/style.scss */
+.navbar h1 { position: relative; top: 0.4em; left: 1em; }
+/* line 73, ../sass/style.scss */
+.navbar a { color: inherit; text-decoration: none; font-size: 1.1em; }
+/* line 78, ../sass/style.scss */
+.navbar ul { position: absolute; right: 2em; top: 1em; }
+/* line 83, ../sass/style.scss */
+.navbar li { display: inline-block; padding: 0.5em; margin-left: 1em; font-size: 1.1em; }
+/* line 88, ../sass/style.scss */
+.navbar li:hover:after { -webkit-transform: scaleX(1); -ms-transform: scaleX(1); transform: scaleX(1); }
+/* line 91, ../sass/style.scss */
+.navbar li:after { display: block; content: ''; border-bottom: solid 3px white; -webkit-transform: scaleX(0); -ms-transform: scaleX(0); transform: scaleX(0); -webkit-transition: -webkit-transform 250ms ease-in-out; transition: transform 250ms ease-in-out; }
+
+/* line 101, ../sass/style.scss */
+h1:hover { -webkit-transition: 0.35s; transition: 0.35s; cursor: pointer; color: red; }
 
 /*
 Full navbar is the navbar that is shown
 after the user has scrolled to almost
 the second div
 */
-.full-navbar {
-  /* Fixed position requires a z-index and will
-make the width shorter, so */
-  position: fixed;
-  width: 100vw;
-  z-index: 100;
-  /*Pink #7c4199 - black: rgba(0,0,0,0.85); */
-  background-color: rgba(0, 0, 0, 0.85);
-  height: 65px;
-  line-height: 40px;
-}
-.full-navbar h1 {
-  padding: 0;
-  color: white;
-  display: inline;
-  font-size: 30px;
-  margin-left: 0.4em;
-  position: relative;
-  top: 0.13em;
-}
-.full-navbar ul {
-  display: inline;
-  float: right;
-}
-.full-navbar li {
-  display: inline;
-  font-size: 18px;
-  margin-left: 1em;
-  position: relative;
-  top: -0.3em;
-}
+/* line 114, ../sass/style.scss */
+.full-navbar {     /* Fixed position requires a z-index and will
+make the width shorter, so */ position: fixed; width: 100vw; z-index: 100; /*Pink #7c4199 - black: rgba(0,0,0,0.85); */ background-color: rgba(0, 0, 0, 0.85); height: 65px; line-height: 40px; }
+/* line 126, ../sass/style.scss */
+.full-navbar h1 { padding: 0; color: white; display: inline; font-size: 30px; margin-left: 0.4em; position: relative; top: 0.13em; }
+/* line 136, ../sass/style.scss */
+.full-navbar ul { display: inline; float: right; }
+/* line 141, ../sass/style.scss */
+.full-navbar li { display: inline; font-size: 18px; margin-left: 1em; position: relative; top: -0.3em; }
 
 /* The text in the middle of the header section*/
-.hero-text {
-  position: relative;
-  top: 15em;
-  text-align: center;
-}
-.hero-text h1 {
-  font-size: 2.5em;
-}
-.hero-text p {
-  position: relative;
-  font-size: 1.5em;
-  margin-top: 1em;
-}
-.hero-text h1, .hero-text p {
-  color: white;
-}
-.hero-text a {
-  color: white;
-  text-decoration: none;
-  position: relative;
-  font-size: 1em;
-  display: inline-block;
-  width: 10em;
-  margin-top: 2em;
-  padding: 1em;
-  border: 2px solid white;
-  color: white;
-  border-radius: 0.3em;
-}
-.hero-text a:hover {
-  background-color: blue;
-  color: white;
-  border: none;
-}
+/* line 151, ../sass/style.scss */
+.hero-text { position: relative; top: 15em; text-align: center; }
+/* line 155, ../sass/style.scss */
+.hero-text h1 { font-size: 2.5em; }
+/* line 159, ../sass/style.scss */
+.hero-text p { position: relative; font-size: 1.5em; margin-top: 1em; }
+/* line 165, ../sass/style.scss */
+.hero-text h1, .hero-text p { color: white; }
+/* line 170, ../sass/style.scss */
+.hero-text a { color: white; text-decoration: none; position: relative; font-size: 1em; display: inline-block; width: 10em; margin-top: 2em; padding: 1em; border: 2px solid white; color: white; border-radius: 0.3em; }
+/* line 182, ../sass/style.scss */
+.hero-text a:hover { background-color: blue; color: white; border: none; }
 
 /*End of header*/
-
 /* Second section*/
-.about {
-  background-image: url(/images/backgroundStripes.png);
-  height: auto;
-  color: white;
-  background-color: #4b2ca0;
-  font-size: 1.5em;
-}
-.about h1 {
-  font-size: 1.4em;
-}
-.about p {
-  font-size: 1em;
-  margin-top: 0.7em;
-}
+/* line 193, ../sass/style.scss */
+.about { background-image: url(/images/backgroundStripes.png); height: auto; color: white; background-color: #4b2ca0; font-size: 1.5em; }
+/* line 199, ../sass/style.scss */
+.about h1 { font-size: 1.4em; }
+/* line 203, ../sass/style.scss */
+.about p { font-size: 1em; margin-top: 0.7em; }
 
 /* The spans that change the words color*/
-#csharp {
-  color: #5bef33;
-}
+/* line 210, ../sass/style.scss */
+#csharp { color: #5bef33; }
 
-#html5 {
-  color: #f32424;
-}
+/* line 213, ../sass/style.scss */
+#html5 { color: #f32424; }
 
-#css3 {
-  color: #8893f0;
-}
+/* line 216, ../sass/style.scss */
+#css3 { color: #8893f0; }
 
-#js {
-  color: #f8f35d;
-}
+/* line 219, ../sass/style.scss */
+#js { color: #f8f35d; }
 
 /* /SPANS */
 /* The text in the about section */
-.about-text {
-  position: relative;
-  top: 2em;
-}
-.about-text p {
-  margin-top: 0.7em;
-}
+/* line 226, ../sass/style.scss */
+.about-text { position: relative; top: 2em; }
+/* line 229, ../sass/style.scss */
+.about-text p { margin-top: 0.7em; }
 
-.skills-text {
-  margin-top: 6em;
-  padding-bottom: 1.5em;
-}
+/* line 233, ../sass/style.scss */
+.skills-text { margin-top: 6em; padding-bottom: 1.5em; }
 
 /* Projects */
-.my-work {
-  height: auto;
-  font-size: 1.3em;
-  background-color: #c2c2ca;
-  text-align: center;
-}
-.my-work h1 {
-  position: relative;
-  top: 0.6em;
-  font-size: 2em;
-}
+/* line 239, ../sass/style.scss */
+.my-work { height: auto; font-size: 1.3em; background-color: #c2c2ca; text-align: center; }
+/* line 244, ../sass/style.scss */
+.my-work h1 { position: relative; top: 0.6em; font-size: 2em; }
 
-.project-box {
-  margin-top: 1em;
-}
+/* line 250, ../sass/style.scss */
+.project-box { margin-top: 1em; }
 
-.content {
-  display: inline-block;
-  width: 60%;
-  margin-top: 2em;
-}
+/* line 253, ../sass/style.scss */
+.content { display: inline-block; width: 60%; margin-top: 2em; }
 
-.description {
-  font-size: 0.9em;
-  margin: 0.4em;
-  color: #010140;
-}
+/* line 258, ../sass/style.scss */
+.description { font-size: 0.9em; margin: 0.4em; color: #010140; }
 
-.my-work .hero-line {
-  position: relative;
-  top: 1em;
-  background-color: black;
-}
+/* line 263, ../sass/style.scss */
+.my-work .hero-line { position: relative; top: 1em; background-color: black; }
 
-.image img {
-  height: 100px;
-  width: 300px;
-  display: inline-block;
-  margin-top: 1em;
-}
+/* line 268, ../sass/style.scss */
+.image img { height: 100px; width: 300px; display: inline-block; margin-top: 1em; }
 
-.title a {
-  display: inline-block;
-  color: inherit;
-  text-decoration: none;
-  font-size: 1.3em;
-}
+/* line 274, ../sass/style.scss */
+.title a { display: inline-block; color: inherit; text-decoration: none; font-size: 1.3em; }
 
-.tools-used ul {
-  list-style-type: none;
-}
-.tools-used li {
-  display: inline-block;
-  padding: 0.4em;
-  margin-top: 0.3em;
-  color: white;
-  background-color: #ed1616;
-  border-radius: 0.2em;
-  font-size: 0.8em;
-}
+/* line 281, ../sass/style.scss */
+.tools-used ul { list-style-type: none; }
+/* line 285, ../sass/style.scss */
+.tools-used li { display: inline-block; padding: 0.4em; margin-top: 0.3em; color: white; background-color: #ed1616; border-radius: 0.2em; font-size: 0.8em; }
 
-.split-line {
-  height: 1px;
-  background-color: black;
-  width: 90%;
-  margin: auto;
-  margin-top: 3em;
-}
+/* line 295, ../sass/style.scss */
+.split-line { height: 1px; background-color: black; width: 90%; margin: auto; margin-top: 3em; }
 
-#projectN2 {
-  padding-bottom: 1em;
-}
+/* line 302, ../sass/style.scss */
+#projectN2 { padding-bottom: 1em; }
 
 /* Contact me section*/
-.contact-me {
-  height: 20em;
-  background-color: blue;
-  color: white;
-}
+/* line 307, ../sass/style.scss */
+.contact-me { height: 20em; background-color: #001f3f; color: white; }
 
 /* Footer */
-footer {
-  padding: 1em;
-  background-color: black;
-  color: grey;
-  text-align: center;
-}
-footer a {
-  color: aliceblue;
-  text-decoration: none;
-}
+/* line 314, ../sass/style.scss */
+footer { padding: 1em; background-color: #85144b; color: white; text-align: center; }
+/* line 319, ../sass/style.scss */
+footer a { color: aliceblue; text-decoration: none; }
 
 /*
 ----- Media queries -----
@@ -306,169 +156,74 @@ At 1057px, the project section is changed,
 where the image and the description is not inline but act as blocks and each take up
 xyz height.
 */
-@media screen and (max-width: 1057px) {
-  .my-work .hero-line {
-    margin-top: 0.7em;
-    margin-bottom: 1em;
-  }
-
-  .image {
-    width: 70%;
-    margin: 0 auto;
-  }
-  .image img {
-    width: 300px;
-    height: 100px;
-  }
-
-  .skills-text {
-    margin-top: 5em;
-  }
-
-  .split-line {
-    margin-top: 1em;
-  }
-
+@media screen and (max-width: 1057px) { /* line 336, ../sass/style.scss */
+  .my-work .hero-line { margin-top: 0.7em; margin-bottom: 1em; }
+  /* line 341, ../sass/style.scss */
+  .image { width: 70%; margin: 0 auto; }
+  /* line 344, ../sass/style.scss */
+  .image img { width: 300px; height: 100px; }
+  /* line 350, ../sass/style.scss */
+  .skills-text { margin-top: 5em; }
+  /* line 354, ../sass/style.scss */
+  .split-line { margin-top: 1em; }
   /* Disable vertical scrollbar */
-  /*
-      ::-webkit-scrollbar {
-          display: block;
-      }
-  */
-  .project-box {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .content {
-    margin-top: 0.5em;
-  }
-}
+  /* ::-webkit-scrollbar { display: block; }
+*/
+  /* line 364, ../sass/style.scss */
+  .project-box { width: 80%; margin: 0 auto; text-align: center; }
+  /* line 370, ../sass/style.scss */
+  .content { margin-top: 0.5em; } }
 /* More than 1000PX */
-@media screen and (min-width: 1058px) {
-  .about-text {
-    top: 3.5em;
-  }
-
-  .skills-text {
-    margin-top: 6em;
-  }
-
-  .image img {
-    width: 312px;
-    height: 135px;
-    float: left;
-    margin-left: 2em;
-  }
-
-  .description .title {
-    display: inline-block;
-  }
-}
+@media screen and (min-width: 1058px) { /* line 377, ../sass/style.scss */
+  .about-text { top: 3.5em; }
+  /* line 381, ../sass/style.scss */
+  .skills-text { margin-top: 6em; }
+  /* line 385, ../sass/style.scss */
+  .image img { width: 312px; height: 135px; float: left; margin-left: 2em; }
+  /* line 392, ../sass/style.scss */
+  .description .title { display: inline-block; } }
 /* Less than 600PX */
-@media screen and (max-width: 600px) {
-  #logo {
-    top: 0;
-    left: 1em;
-  }
-
-  .navbar h1 {
-    line-height: 40px;
-    display: inline;
-  }
-  .navbar ul {
-    height: 0;
-    width: 100vw;
-    display: none;
-    overflow: hidden;
-    text-align: center;
-    position: relative;
-    top: 0.4em;
-    right: 1em;
-    background-color: #060719;
-  }
-  .navbar ul li {
-    display: none;
-    display: block;
-    width: 100vw;
-    float: none;
-    overflow: hidden;
-    border-bottom: 1px solid #75777a;
-  }
-  .navbar ul li:first-child {
-    border-top: 1px solid #75777a;
-  }
-
-  .mobile-nav {
-    display: block;
-    background: url(/images/burgernav.svg) no-repeat 93% center;
-    height: 32px;
-    position: relative;
-    top: 2em;
-  }
-
-  .hero-text {
-    position: relative;
-    top: 3em;
-  }
-
+@media screen and (max-width: 600px) { /* line 399, ../sass/style.scss */
+  #logo { top: 0; left: 1em; }
+  /* line 405, ../sass/style.scss */
+  .navbar h1 { line-height: 40px; display: inline; }
+  /* line 409, ../sass/style.scss */
+  .navbar ul { height: 0; width: 100vw; display: none; overflow: hidden; text-align: center; position: relative; top: 0.4em; right: 1em; background-color: #060719; }
+  /* line 419, ../sass/style.scss */
+  .navbar ul li { display: none; display: block; width: 100vw; float: none; overflow: hidden; border-bottom: 1px solid #75777a; }
+  /* line 426, ../sass/style.scss */
+  .navbar ul li:first-child { border-top: 1px solid #75777a; }
+  /* line 433, ../sass/style.scss */
+  .mobile-nav { display: block; background: url(/images/burgernav.svg) no-repeat 93% center; height: 32px; position: relative; top: 2em; }
+  /* line 441, ../sass/style.scss */
+  .hero-text { position: relative; top: 3em; }
     /*
 Navbar if the user has scrolled down on
 other divs
 */
-  .full-navbar {
-    display: none;
-    /*
-            display: block;
-            top: 1em;
-            background-position: 90% center;
-    */
-  }
-  .full-navbar #logo {
-    position: relative;
-    top: -0.7em;
-  }
-
-  .about {
-    font-size: 1.45em;
-  }
-
-  .project-box {
-    margin-bottom: 0em;
-  }
-
-  .image img {
-    width: 250px;
-  }
-}
+  /* line 450, ../sass/style.scss */
+  .full-navbar { display: none     /* display: block; top: 1em; background-position: 90% center;
+*/ }
+  /* line 451, ../sass/style.scss */
+  .full-navbar #logo { position: relative; top: -0.7em; }
+  /* line 463, ../sass/style.scss */
+  .about { font-size: 1.45em; }
+  /* line 467, ../sass/style.scss */
+  .project-box { margin-bottom: 0em; }
+  /* line 471, ../sass/style.scss */
+  .image img { width: 250px; } }
 /* Less than 500PX */
-@media screen and (max-width: 500px) {
-  .hero-line {
-    margin-top: 0.2em;
-    margin-bottom: -0.4em;
-  }
-
-  .image img {
-    width: 200px;
-  }
-}
+@media screen and (max-width: 500px) { /* line 478, ../sass/style.scss */
+  .hero-line { margin-top: 0.2em; margin-bottom: -0.4em; }
+  /* line 483, ../sass/style.scss */
+  .image img { width: 200px; } }
 /* Less than 400PX */
-@media screen and (max-width: 400px) {
-  .hero-text {
-    top: 5em;
-    width: 80%;
-    margin: auto;
-  }
+@media screen and (max-width: 400px) { /* line 490, ../sass/style.scss */
+  .hero-text { top: 5em; width: 80%; margin: auto; }
+  /* line 496, ../sass/style.scss */
+  .about { font-size: 1.3em; }
+  /* line 500, ../sass/style.scss */
+  .image img { width: 150px; height: 100px; margin: 1em auto -1em auto /* 1em from top, auto to right-left to center it and -1em for bottom, so the content such as the description and the title can be closer */ } }
+/*# sourceMappingURL=style.css.map */
 
-  .about {
-    font-size: 1.3em;
-  }
-
-  .image img {
-    width: 150px;
-    height: 100px;
-    margin: 1em auto -1em auto;
-    /* 1em from top, auto to right-left to center it and -1em for bottom, so the content such as the description and the title can be closer */
-  }
-}
+/*# sourceMappingURL=style.css.map */
