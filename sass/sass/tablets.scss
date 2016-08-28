@@ -1,0 +1,78 @@
+/* Less than 600PX */
+@media screen and (max-width: 600px) {
+    #logo {
+        top: 0;
+        left: 1em;
+    }
+    
+    .navbar {
+        h1 {
+            line-height: 40px;
+            display: inline;
+        }
+        ul {
+            height: 0;
+            width: 100vw;
+            display: none;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            top: 0.4em;
+            right: 1em;
+            background-color: #060719;
+            li {
+                display: none;
+                display: block;
+                width: 100vw;
+                float: none;
+                overflow: hidden;
+                border-bottom: 1px solid #75777a;
+                &:first-child {
+                    border-top: 1px solid #75777a;
+                }
+            }
+        }
+    }
+    
+    .mobile-nav {
+        display: block;
+        background: url(/images/burgernav.svg) no-repeat 93% center;
+        height: 32px;
+        position: relative;
+        top: 2em;
+    }
+    
+    .hero-text {
+        position: relative;
+        top: 3em;
+    }
+    /*
+Navbar if the user has scrolled down on
+other divs
+*/
+    
+    .full-navbar {
+        #logo {
+            position: relative;
+            top: -0.7em;
+        }
+        display: none;
+        /*
+            display: block;
+            top: 1em;
+            background-position: 90% center;
+    */
+    }
+    
+    .about {
+        font-size: 1.45em;
+    }
+    
+    .project-box {
+        margin-bottom: 0em;
+    }
+    
+    .image img {
+        width: 250px;
+    }
+}
