@@ -90,29 +90,29 @@
 .project-box { margin-top: 1em; }
 
 /* line 17, ../sass/projects-section.scss */
-.content { display: inline-block; width: 60%; margin-top: 2em; }
+.content { margin-top: 2em; }
 
-/* line 22, ../sass/projects-section.scss */
+/* line 20, ../sass/projects-section.scss */
 .description { font-size: 0.9em; margin: 0.4em; color: #010140; }
 
-/* line 27, ../sass/projects-section.scss */
+/* line 25, ../sass/projects-section.scss */
 .my-work .hero-line { position: relative; top: 1em; background-color: black; }
 
-/* line 32, ../sass/projects-section.scss */
-.image img { height: 100px; width: 300px; display: inline-block; margin-top: 1em; }
+/* line 30, ../sass/projects-section.scss */
+.image img { height: 100px; width: 300px; display: inline; margin-top: 1em; }
 
-/* line 38, ../sass/projects-section.scss */
+/* line 36, ../sass/projects-section.scss */
 .title a { display: inline-block; color: inherit; text-decoration: none; font-size: 1.3em; }
 
-/* line 45, ../sass/projects-section.scss */
+/* line 43, ../sass/projects-section.scss */
 .tools-used ul { list-style-type: none; }
-/* line 49, ../sass/projects-section.scss */
-.tools-used li { display: inline-block; padding: 0.4em; margin-top: 0.3em; color: white; background-color: #ed1616; border-radius: 0.2em; font-size: 0.8em; }
+/* line 47, ../sass/projects-section.scss */
+.tools-used li { display: inline; padding: 0.4em; margin-top: 0.3em; color: white; background-color: #ed1616; border-radius: 0.2em; font-size: 0.8em; }
 
-/* line 59, ../sass/projects-section.scss */
+/* line 57, ../sass/projects-section.scss */
 .split-line { height: 1px; background-color: black; width: 90%; margin: auto; margin-top: 3em; }
 
-/* line 66, ../sass/projects-section.scss */
+/* line 64, ../sass/projects-section.scss */
 #projectN2 { padding-bottom: 1em; }
 
 /* Less than 500PX */

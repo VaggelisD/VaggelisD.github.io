@@ -54,41 +54,41 @@ Full navbar is the navbar that is shown
 after the user has scrolled to almost
 the second div
 */
-.full-navbar {
-    /* Fixed position requires a z-index and will
-make the width shorter, so */
-    
-    position: fixed;
-    width: 100vw;
-    z-index: 100;
-    /*Pink #7c4199 - black: rgba(0,0,0,0.85); */
-    
-    background-color: rgba(0, 0, 0, 0.85);
-    height: 65px;
-    line-height: 40px;
-    h1 {
-        padding: 0;
-        color: white;
-        display: inline;
-        font-size: 30px;
-        margin-left: 0.4em;
-        position: relative;
-        top: 0.13em;
-    }
-    
-    ul {
-        display: inline;
-        float: right;
-    }
-    
-    li {
-        display: inline;
-        font-size: 18px;
-        margin-left: 1em;
-        position: relative;
-        top: -0.3em;
-    }
-}
+//.full-navbar {
+//    /* Fixed position requires a z-index and will
+//make the width shorter, so */
+//    
+//    position: fixed;
+//    width: 100vw;
+//    z-index: 100;
+//    /*Pink #7c4199 - black: rgba(0,0,0,0.85); */
+//    
+//    background-color: rgba(0, 0, 0, 0.85);
+//    height: 65px;
+//    line-height: 40px;
+//    h1 {
+//        padding: 0;
+//        color: white;
+//        display: inline;
+//        font-size: 30px;
+//        margin-left: 0.4em;
+//        position: relative;
+//        top: 0.13em;
+//    }
+//    
+//    ul {
+//        display: inline;
+//        float: right;
+//    }
+//    
+//    li {
+//        display: inline;
+//        font-size: 18px;
+//        margin-left: 1em;
+//        position: relative;
+//        top: -0.3em;
+//    }
+//}
 
 
 /* Footer */
